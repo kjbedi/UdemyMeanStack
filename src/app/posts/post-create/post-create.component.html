@@ -1,0 +1,36 @@
+<h1>The Post Create Component</h1>
+
+<mat-card>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+
+   <mat-form-field>
+      <mat-label class = "post-create-text">Enter Title</mat-label>
+      <input required class = "post-create-text" matInput placeholder="Post title" #title="ngModel" [ngModel] = 'post?.title' name = "title" type = "text">
+      <mat-error *ngIf="title.invalid">
+        Please enter a post title.
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+
+      <mat-label class = "post-create-text">Enter Content</mat-label>
+      <textarea #content="ngModel" required class = "post-create-text" matInput rows = "4" [ngModel] = 'post?.content' name = "content" placeholder="Post Content">
+      </textarea>
+      <mat-error *ngIf="title.invalid">
+        Please enter a post content.
+      </mat-error>
+
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit">
+
+    Save Post
+    </button>
+  </form>
+
+</mat-card>

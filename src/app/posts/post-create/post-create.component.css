@@ -1,0 +1,16 @@
+mat-card {
+  background-color: whitesmoke;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.post-create-text {
+  color: black;
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}

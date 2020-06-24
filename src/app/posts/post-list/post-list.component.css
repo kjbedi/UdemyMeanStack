@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.mat-expansion-panel {
+  background:WhiteSmoke;
+  color: black;
+}
+
+.info-text {
+  text-align: center;
+}
+
+mat-spinner {
+  margin: auto;
+}
